@@ -15,7 +15,10 @@ function EventItem(props) {
     year: "numeric",
   });
   const formattedAddress = location.replace(", ", "\n");
+  //important javascript for 
   const exploreLink = `/events/${id}`;
+  //this is the path we are generating the path for explore link
+
 
   return (
     <li className={classes.item}>
@@ -31,7 +34,7 @@ function EventItem(props) {
          <AddressIcon/>
             <address>{formattedAddress}</address>
           </div>
-        </div>
+        </div> 
         <div className={classes.actions}>
       <Button link={exploreLink}>
       <span>Explore Event</span>
