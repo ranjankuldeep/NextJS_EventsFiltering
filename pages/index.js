@@ -5,21 +5,26 @@ import {getFeaturedEvents} from '../Helper/api_util';
 
 function HomePage(props){
     const {featuredEvents}=props;
-    console.log(featuredEvents)
+
 
     return(
         <EventList items={featuredEvents}/>
     )
 }
 
+// We are creating static pages for the homepage
+
 export async function getStaticProps(){
-console.log('i am running')
+
     const featuredEvents= await getFeaturedEvents();
 return {
     props:{
-        featuredEvents:featuredEvents
+        featuredEvents:featuredEvents,
+      
     }
 }
 }
 // module.exports = HomePage;
+//This way of exporting making app to crash.
+
 export default HomePage;

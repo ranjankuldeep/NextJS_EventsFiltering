@@ -38,6 +38,7 @@ const DUMMY_EVENTS = [
   export function getAllEvents() {
     return DUMMY_EVENTS;
   }
+  //Always export function in this only and acess through the object destructuring 
   
   export function getFilteredEvents(dateFilter) {
     const { year, month } = dateFilter;
